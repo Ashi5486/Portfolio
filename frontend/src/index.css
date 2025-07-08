@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "Poppins",sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+@layer utilities{
+    .clipp-path-custom{
+        clip-path: polygon(0 0, 100% 0, 100% 98%,75% 95%,0 100%);
+    }
+}
+/* global.css or index.css */
+.shimmer {
+  background: linear-gradient(90deg, #fff, #c084fc, #fff);
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
