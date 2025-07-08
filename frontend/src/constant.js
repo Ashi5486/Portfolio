@@ -56,8 +56,8 @@ export const SkillsInfo = [
     skills: [
       { name: 'HTML', logo: htmlLogo, percentage: 80 },
       { name: 'CSS', logo: cssLogo, percentage: 75 },
-      { name: 'JavaScript', logo: javascriptLogo, percentage: 65 },
-      { name: 'React JS', logo: reactjsLogo, percentage: 70 },
+      { name: 'JavaScript', logo: javascriptLogo, percentage: 60 },
+      { name: 'React JS', logo: reactjsLogo, percentage: 60 },
       { name: 'Redux', logo: reduxLogo, percentage: 40 },
       { name: 'Tailwind CSS', logo: tailwindcssLogo, percentage: 55 },
       { name: 'Bootstrap', logo: bootstrapLogo, percentage: 70 },
@@ -66,7 +66,7 @@ export const SkillsInfo = [
   {
     title: 'Backend',
     skills: [
-      { name: 'Node JS', logo: nodejsLogo, percentage: 65 },
+      { name: 'Node JS', logo: nodejsLogo, percentage: 60 },
       { name: 'Express JS', logo: expressjsLogo, percentage: 72 },
       { name: 'MySQL', logo: mysqlLogo, percentage: 45 },
       { name: 'MongoDB', logo: mongodbLogo, percentage: 65 },
@@ -77,7 +77,7 @@ export const SkillsInfo = [
     skills: [
       { name: 'C', logo: cLogo, percentage: 70 },
       { name: 'C++', logo: cppLogo, percentage: 75 },
-      { name: 'Python', logo: pythonLogo, percentage:  60},
+      { name: 'Python', logo: pythonLogo, percentage:  50},
       { name: 'JavaScript', logo: javascriptLogo, percentage: 65 },
     ],
   },

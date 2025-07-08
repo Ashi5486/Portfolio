@@ -1,17 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const form = useRef();
+  const [successMsg, setSuccessMsg] = useState("");
 
-  // ✅ Use fetch to connect with your backend
   const sendEmail = async (e) => {
     e.preventDefault();
 
     const formData = {
-      user_email: form.current.user_email.value,
       user_name: form.current.user_name.value,
+      user_email: form.current.user_email.value,
+      user_mobile: form.current.user_mobile.value,
       subject: form.current.subject.value,
       message: form.current.message.value,
     };
@@ -25,13 +26,15 @@ const Contact = () => {
 
       if (response.ok) {
         form.current.reset();
-        toast.success("Message sent successfully! ✅", {
+        setSuccessMsg("✅ Thanks! Your message has been sent.");
+        toast.success("Message sent successfully!", {
           position: "top-right",
           autoClose: 3000,
           theme: "dark",
         });
       } else {
-        toast.error("Failed to send message ❌", {
+        setSuccessMsg("");
+        toast.error("❌ Failed to send message", {
           position: "top-right",
           autoClose: 3000,
           theme: "dark",
@@ -39,6 +42,7 @@ const Contact = () => {
       }
     } catch (error) {
       console.error("Error:", error);
+      setSuccessMsg("");
       toast.error("Something went wrong", {
         position: "top-right",
         autoClose: 3000,
@@ -54,7 +58,6 @@ const Contact = () => {
     >
       <ToastContainer />
 
-      {/* Section Title */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white">CONTACT</h2>
         <div className="w-48 h-1 bg-purple-500 mx-auto mt-4"></div>
@@ -63,13 +66,19 @@ const Contact = () => {
         </p>
       </div>
 
-      {/* Contact Form */}
       <div className="mt-1 w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
         <h3 className="text-xl font-semibold text-white text-center">
           Connect With Me <span className="ml-1">🚀</span>
         </h3>
 
         <form ref={form} onSubmit={sendEmail} className="mt-4 flex flex-col space-y-4">
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            required
+            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+          />
           <input
             type="email"
             name="user_email"
@@ -78,10 +87,13 @@ const Contact = () => {
             className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
           />
           <input
-            type="text"
-            name="user_name"
-            placeholder="Your Name"
+            type="tel"
+            name="user_mobile"
+            placeholder="Your Contact Number"
             required
+            pattern="[0-9]{10}"
+            maxLength="10"
+            title="Please enter exactly 10 digits"
             className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
           />
           <input
@@ -98,7 +110,6 @@ const Contact = () => {
             required
             className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
           />
-
           <button
             type="submit"
             className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
@@ -106,6 +117,11 @@ const Contact = () => {
             Send
           </button>
         </form>
+
+        {/* ✅ Optional confirmation message below form */}
+        {successMsg && (
+          <p className="text-green-400 text-center mt-4">{successMsg}</p>
+        )}
       </div>
     </section>
   );
