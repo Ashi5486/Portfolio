@@ -205,7 +205,7 @@ export const SkillsInfo = [
         "Developed Snapgram,a social media platform designed to facilitate sharing and interaction among users through posts,stories, and direct messaging.with features Like User authentication , Dynamic Feeds , infinite scrol Secure sign-up and login Appwrite backend.",
       image: snaplogo,
       tags: ["React", "Tailwind CSS", "JavaScript","php","Shadcn","Appwrite"],
-      github: "https://github.com/codingmastr/Movie-Recommendation-App",
+      // github: "https://github.com/codingmastr/Movie-Recommendation-App",
       // webapp: "https://movie-recommendation-app-jet.vercel.app/",
     },
     {
@@ -255,7 +255,7 @@ export const SkillsInfo = [
         "A standalone full-stack authentication system with secure login and signup features. It includes password encryption, session management, and user role support—built for seamless integration into any web platform requiring reliable user authentication.",
       image: loginLogo,
       tags: ["React JS", "Node.js", "MongoDB", "Express", "jwt"],
-      github: "https://codingmasterweb.in/",
+      // github: "https://codingmasterweb.in/",
       // webapp: "https://codingmasterweb.in/",
     },
     
@@ -266,7 +266,7 @@ export const SkillsInfo = [
         "A personal portfolio website showcasing my projects, skills, and experience. Built with React.js, it features a modern design, smooth animations, and responsive layout.",
       image: portLogo,
       tags: ["React JS", "API", "Framer-motion", "HTML", "CSS", "Javascript", "MongoDB", "Nodejs"],
-      github: "https://github.com/codingmastr/Image-Background-Remover",
-      webapp: "https://removeyourbg.netlify.app/",
+      // github: "https://github.com/codingmastr/Image-Background-Remover",
+      // webapp: "https://removeyourbg.netlify.app/",
     },
   ];  
