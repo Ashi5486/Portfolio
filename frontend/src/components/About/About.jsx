@@ -58,7 +58,7 @@ const About = () => {
 
           <a
             aria-label="Download CV as Pdf."
-            href="https://drive.google.com/file/d/15dHETRMdrSz4LWgd9g9uw0cOzoX6vF4Z/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1Ob_bGCKF6qZcYhY-wCPNV6DzHKbZt0a4/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="relative group inline-flex items-center gap-2 px-8 py-3 rounded-full font-semibold text-white text-lg mt-0 z-10 overflow-hidden shadow-xl transition-all duration-500 hover:scale-105"
