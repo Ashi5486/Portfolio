@@ -11,14 +11,15 @@ const About = () => {
       id="about"
       className="py-4 lg:px-[10vw] font-sans md:mt-10 lg:mt-15 text-black dark:text-white transition-colors duration-300"
     >
+      {/* ===== Main Flex Container ===== */}
       <motion.div
-        className="flex flex-col-reverse md:flex-row justify-between items-start"
+        className="flex flex-col-reverse md:flex-row justify-between items-center md:items-start"
         variants={fadeIn('up', 0)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
       >
-        {/* Left Side - Text Content */}
+        {/* ===== Left Side - Text Content ===== */}
         <motion.div
           className="md:w-1/2 text-center md:text-left mt-6 md:mt-0"
           variants={fadeIn('left', 0.2)}
@@ -52,7 +53,12 @@ const About = () => {
           </h3>
 
           <p className="text-base sm:text-lg md:text-lg text-gray-700 dark:text-gray-300 mb-10 mt-8 leading-relaxed">
-            I am a passionate MERN stack developer with 6 months of hands-on experience as a MERN stack development intern, where I built full-stack web applications using MongoDB, Express.js, React.js, and Node.js. I have developed RESTful APIs, designed responsive front-end interfaces, managed state using React hooks and context, and integrated backend services. I’m now seeking a full-time opportunity to apply my skills, grow professionally, and contribute to a collaborative and innovative development team.
+            I am a passionate MERN stack developer with 6 months of hands-on experience
+            as a MERN stack development intern, where I built full-stack web applications
+            using MongoDB, Express.js, React.js, and Node.js. I have developed RESTful APIs,
+            designed responsive front-end interfaces, managed state using React hooks and context,
+            and integrated backend services. I’m now seeking a full-time opportunity to apply my skills,
+            grow professionally, and contribute to a collaborative and innovative development team.
           </p>
 
           <a
@@ -68,9 +74,9 @@ const About = () => {
           </a>
         </motion.div>
 
-        {/* Right Side - Profile Image */}
+        {/* ===== Right Side - Profile Image ===== */}
         <motion.div
-          className="md:w-1/2 flex justify-center md:justify-end mb-8 md:mb-0"
+          className="w-full md:w-1/2 flex justify-center md:justify-end mb-8 md:mb-0"
           variants={fadeIn('right', 0.4)}
         >
           <div className="relative animate-fade-in-up">
