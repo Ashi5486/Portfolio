@@ -2,7 +2,6 @@ import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
-// import Profileimg from '../../assets/Profileimg.png';
 import Profileimg from "../../assets/Profile_Img.png";
 import { fadeIn } from '../../variants';
 
@@ -71,7 +70,7 @@ const About = () => {
 
         {/* Right Side - Profile Image */}
         <motion.div
-          className="md:w-1/2 flex justify-center md:justify-end"
+          className="md:w-1/2 flex justify-center md:justify-end mb-8 md:mb-0"
           variants={fadeIn('right', 0.4)}
         >
           <div className="relative animate-fade-in-up">
